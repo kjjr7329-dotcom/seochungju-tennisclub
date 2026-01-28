@@ -20,14 +20,31 @@
 
 <body class="bg-gray-50 text-gray-900">
 
- <!-- Header -->
-<header class="bg-white shadow sticky top-0 z-50">
+ <header class="bg-white shadow sticky top-0 z-50">
   <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
-    <h1 class="text-xl font-bold">
+
+    <!-- 로고 -->
+    <h1 class="text-lg font-bold">
       서충주신도시테니스클럽 🎾
     </h1>
 
-    <nav class="space-x-4 text-sm hidden md:block">
+    <!-- PC 메뉴 -->
+    <nav class="hidden md:flex space-x-6 text-sm font-medium">
+      <a href="#about" class="hover:text-green-600">클럽소개</a>
+      <a href="#members" class="hover:text-green-600">회원현황</a>
+      <a href="#gallery" class="hover:text-green-600">활동사진</a>
+      <a href="#join" class="hover:text-green-600">가입안내</a>
+    </nav>
+
+    <!-- 모바일 메뉴 버튼 -->
+    <button id="menuBtn" class="md:hidden text-2xl">
+      ☰
+    </button>
+  </div>
+
+  <!-- 모바일 메뉴 -->
+  <div id="mobileMenu" class="hidden md:hidden bg-white border-t">
+    <nav class="flex flex-col text-center py-4 space-y-4">
       <a href="#about" class="hover:text-green-600">클럽소개</a>
       <a href="#members" class="hover:text-green-600">회원현황</a>
       <a href="#gallery" class="hover:text-green-600">활동사진</a>
@@ -35,6 +52,7 @@
     </nav>
   </div>
 </header>
+
 
 
 
@@ -296,6 +314,14 @@
 
   menuBtn.addEventListener('click', () => {
     mobileMenu.classList.toggle('hidden');
+  });
+</script>
+<script>
+  const btn = document.getElementById('menuBtn');
+  const menu = document.getElementById('mobileMenu');
+
+  btn.addEventListener('click', () => {
+    menu.classList.toggle('hidden');
   });
 </script>
 
