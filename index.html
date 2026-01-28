@@ -24,7 +24,35 @@
   <header class="bg-white shadow">
     <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
       <h1 class="text-xl font-bold">서충주신도시테니스클럽 🎾</h1>
-      <nav class="flex gap-6 text-sm font-medium">
+      <!-- 헤더 -->
+<header class="bg-white shadow fixed w-full z-50">
+  <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+
+    <h1 class="font-bold text-lg">서충주신도시 테니스클럽</h1>
+
+    <!-- PC 메뉴 -->
+    <nav class="hidden md:flex space-x-6">
+      <a href="#about">소개</a>
+      <a href="#members">회원현황</a>
+      <a href="#join">가입안내</a>
+      <a href="#gallery">활동사진</a>
+    </nav>
+
+    <!-- 모바일 버튼 -->
+    <button id="menuBtn" class="md:hidden text-2xl">
+      ☰
+    </button>
+  </div>
+
+  <!-- 모바일 메뉴 -->
+  <div id="mobileMenu" class="hidden md:hidden bg-white border-t">
+    <a href="#about" class="block px-4 py-3">소개</a>
+    <a href="#members" class="block px-4 py-3">회원현황</a>
+    <a href="#join" class="block px-4 py-3">가입안내</a>
+    <a href="#gallery" class="block px-4 py-3">활동사진</a>
+  </div>
+</header>
+
   <a href="#about" class="relative hover:text-green-600 after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-[2px] after:bg-green-600 hover:after:w-full after:transition-all">클럽소개</a>
 
   <a href="#members" class="relative hover:text-green-600 after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-[2px] after:bg-green-600 hover:after:w-full after:transition-all">회원현황</a>
@@ -243,6 +271,14 @@
   <p class="mt-2 text-xs">© 2024 All Rights Reserved.</p>
 </footer>
 
+<script>
+  const btn = document.getElementById("menuBtn");
+  const menu = document.getElementById("mobileMenu");
+
+  btn.addEventListener("click", () => {
+    menu.classList.toggle("hidden");
+  });
+</script>
 
 </body>
 </html>
