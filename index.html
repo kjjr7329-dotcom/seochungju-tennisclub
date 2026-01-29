@@ -418,41 +418,58 @@
 
 <!-- 최근 활동 사진 -->
 <section id="gallery" class="bg-gray-100 py-20">
-  <div class="max-w-6xl mx-auto px-4">
-    <h3 class="text-2xl font-semibold mb-2 text-center">최근 활동 모습</h3>
-    <p class="text-sm text-gray-500 mb-10 text-center">
+  <div class="max-w-6xl mx-auto px-4 text-center">
+    <h3 class="text-2xl font-semibold mb-2">최근 활동 모습</h3>
+    <p class="text-sm text-gray-500 mb-10">
       클럽의 실제 활동을 사진으로 확인해보세요
     </p>
 
-    <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
       
-      <div class="group overflow-hidden rounded-2xl shadow-md">
+      <!-- 사진 1 -->
+      <div class="group relative overflow-hidden rounded-2xl shadow-md cursor-pointer">
         <img src="images/gallery1.png"
              alt="테니스 활동 사진 1"
-             class="w-full h-48 object-cover transition duration-300 group-hover:scale-110">
+             class="w-full h-48 object-cover transition duration-500 group-hover:scale-110">
+        <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+          <span class="text-white text-sm font-medium">클럽 연습</span>
+        </div>
       </div>
 
-      <div class="group overflow-hidden rounded-2xl shadow-md">
+      <!-- 사진 2 -->
+      <div class="group relative overflow-hidden rounded-2xl shadow-md cursor-pointer">
         <img src="images/gallery2.png"
              alt="테니스 활동 사진 2"
-             class="w-full h-48 object-cover transition duration-300 group-hover:scale-110">
+             class="w-full h-48 object-cover transition duration-500 group-hover:scale-110">
+        <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+          <span class="text-white text-sm font-medium">복식 경기</span>
+        </div>
       </div>
 
-      <div class="group overflow-hidden rounded-2xl shadow-md">
+      <!-- 사진 3 -->
+      <div class="group relative overflow-hidden rounded-2xl shadow-md cursor-pointer">
         <img src="images/gallery3.png"
              alt="테니스 활동 사진 3"
-             class="w-full h-48 object-cover transition duration-300 group-hover:scale-110">
+             class="w-full h-48 object-cover transition duration-500 group-hover:scale-110">
+        <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+          <span class="text-white text-sm font-medium">매너 플레이</span>
+        </div>
       </div>
 
-      <div class="group overflow-hidden rounded-2xl shadow-md">
+      <!-- 사진 4 -->
+      <div class="group relative overflow-hidden rounded-2xl shadow-md cursor-pointer">
         <img src="images/gallery4.png"
              alt="테니스 활동 사진 4"
-             class="w-full h-48 object-cover transition duration-300 group-hover:scale-110">
+             class="w-full h-48 object-cover transition duration-500 group-hover:scale-110">
+        <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+          <span class="text-white text-sm font-medium">즐거운 시간</span>
+        </div>
       </div>
 
     </div>
   </div>
 </section>
+
 
 
 
