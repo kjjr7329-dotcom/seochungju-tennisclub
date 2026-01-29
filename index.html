@@ -418,48 +418,68 @@
 <!-- 최근 활동 사진 -->
 <section id="gallery" class="bg-gray-100 py-20">
   <div class="max-w-6xl mx-auto px-4">
-
     <h3 class="text-2xl font-semibold mb-2 text-center">최근 활동 모습</h3>
-    <p class="text-sm text-gray-500 mb-8 text-center">
+    <p class="text-sm text-gray-500 mb-10 text-center">
       클럽의 실제 활동을 사진으로 확인해보세요
     </p>
 
+    <div class="grid grid-cols-2 md:grid-cols-3 gap-5">
+      
+      <!-- 카드 1 -->
+      <div class="group relative overflow-hidden rounded-2xl shadow-lg">
+        <img src="photo1.jpg"
+             class="w-full h-60 object-cover
+                    transition-transform duration-500
+                    group-hover:scale-110">
 
-  <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
-
-    <!-- 카드 1 -->
-    <div class="relative group overflow-hidden rounded-xl shadow">
-      <img src="사진1"
-           class="w-full h-56 object-cover group-hover:scale-105 transition duration-300">
-
-      <!-- 라벨 -->
-      <div class="absolute bottom-2 left-2 bg-black/70 text-white text-xs px-2 py-1 rounded">
-        2024.11 ｜ 정기모임
+        <div class="absolute inset-0 bg-black/40
+                    opacity-0 group-hover:opacity-100
+                    transition-opacity duration-500
+                    flex items-end p-4">
+          <p class="text-white text-sm">
+            🎾 주말 친선 경기
+          </p>
+        </div>
       </div>
-    </div>
 
-    <!-- 카드 2 -->
-    <div class="relative group overflow-hidden rounded-xl shadow">
-      <img src="사진2"
-           class="w-full h-56 object-cover group-hover:scale-105 transition duration-300">
+      <!-- 카드 2 -->
+      <div class="group relative overflow-hidden rounded-2xl shadow-lg">
+        <img src="photo2.jpg"
+             class="w-full h-60 object-cover
+                    transition-transform duration-500
+                    group-hover:scale-110">
 
-      <div class="absolute bottom-2 left-2 bg-black/70 text-white text-xs px-2 py-1 rounded">
-        2024.10 ｜ 친선 게임
+        <div class="absolute inset-0 bg-black/40
+                    opacity-0 group-hover:opacity-100
+                    transition-opacity duration-500
+                    flex items-end p-4">
+          <p class="text-white text-sm">
+            🤝 신규 회원 환영전
+          </p>
+        </div>
       </div>
-    </div>
 
-    <!-- 카드 3 -->
-    <div class="relative group overflow-hidden rounded-xl shadow">
-      <img src="사진3"
-           class="w-full h-56 object-cover group-hover:scale-105 transition duration-300">
+      <!-- 카드 3 -->
+      <div class="group relative overflow-hidden rounded-2xl shadow-lg">
+        <img src="photo3.jpg"
+             class="w-full h-60 object-cover
+                    transition-transform duration-500
+                    group-hover:scale-110">
 
-      <div class="absolute bottom-2 left-2 bg-black/70 text-white text-xs px-2 py-1 rounded">
-        2024.09 ｜ 신규회원 환영
+        <div class="absolute inset-0 bg-black/40
+                    opacity-0 group-hover:opacity-100
+                    transition-opacity duration-500
+                    flex items-end p-4">
+          <p class="text-white text-sm">
+            🌙 평일 야간 연습
+          </p>
+        </div>
       </div>
-    </div>
 
+    </div>
   </div>
 </section>
+
 
 
 
