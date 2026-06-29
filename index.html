@@ -509,56 +509,169 @@
 <!-- 최근 활동 사진 -->
 <section id="gallery" class="bg-gray-50 py-20">
   <div class="max-w-6xl mx-auto px-4 text-center">
-    <h3 class="text-2xl md:text-3xl font-semibold mb-10 text-center">최근 활동 모습</h3>
+    <h3 class="text-2xl md:text-3xl font-semibold mb-4 text-center">최근 활동 모습</h3>
     <p class="text-sm text-gray-500 mb-10">
       클럽의 실제 활동을 사진으로 확인해보세요
     </p>
 
-    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-      
-      <!-- 사진 1 -->
-      <div class="group relative overflow-hidden rounded-2xl shadow-md cursor-pointer">
-        <img src="images/gallery1.jpg"
-             alt="테니스 활동 사진 1"
-             class="w-full h-48 object-cover transition duration-500 group-hover:scale-110">
-        <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
-          <span class="text-white text-sm font-medium">클럽 연습</span>
-        </div>
-      </div>
+    <!-- 슬라이더 래퍼 -->
+    <div class="relative">
 
-      <!-- 사진 2 -->
-      <div class="group relative overflow-hidden rounded-2xl shadow-md cursor-pointer">
-        <img src="images/gallery2.jpg"
-             alt="테니스 활동 사진 2"
-             class="w-full h-48 object-cover transition duration-500 group-hover:scale-110">
-        <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
-          <span class="text-white text-sm font-medium">복식 경기</span>
-        </div>
-      </div>
+      <!-- 왼쪽 버튼 -->
+      <button id="prevBtn"
+        class="absolute left-0 top-1/2 -translate-y-1/2 z-10
+               w-10 h-10 bg-white rounded-full shadow-md border border-gray-200
+               flex items-center justify-center text-xl font-bold text-gray-600
+               hover:bg-gray-100 transition -translate-x-4">
+        ‹
+      </button>
 
-      <!-- 사진 3 -->
-      <div class="group relative overflow-hidden rounded-2xl shadow-md cursor-pointer">
-        <img src="images/gallery3.jpg"
-             alt="테니스 활동 사진 3"
-             class="w-full h-48 object-cover transition duration-500 group-hover:scale-110">
-        <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
-          <span class="text-white text-sm font-medium">매너 플레이</span>
-        </div>
-      </div>
+      <!-- 슬라이드 트랙 -->
+      <div id="galleryTrack"
+        class="flex gap-4 overflow-x-auto px-2 pb-4"
+        style="scroll-behavior:smooth; -ms-overflow-style:none; scrollbar-width:none; scroll-snap-type:x mandatory;">
 
-      <!-- 사진 4 -->
-      <div class="group relative overflow-hidden rounded-2xl shadow-md cursor-pointer">
-        <img src="images/gallery4.jpg"
-             alt="테니스 활동 사진 4"
-             class="w-full h-48 object-cover transition duration-500 group-hover:scale-110">
-        <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
-          <span class="text-white text-sm font-medium">즐거운 시간</span>
+        <!-- 1 -->
+        <div class="group relative flex-shrink-0 w-64 overflow-hidden rounded-2xl shadow-md cursor-pointer" style="scroll-snap-align:start;">
+          <img src="images/gallery1.jpg" alt="활동 사진 1" class="w-full h-48 object-cover transition duration-500 group-hover:scale-110">
+          <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+            <span class="text-white text-sm font-medium">클럽 연습</span>
+          </div>
         </div>
-      </div>
+        <!-- 2 -->
+        <div class="group relative flex-shrink-0 w-64 overflow-hidden rounded-2xl shadow-md cursor-pointer" style="scroll-snap-align:start;">
+          <img src="images/gallery2.jpg" alt="활동 사진 2" class="w-full h-48 object-cover transition duration-500 group-hover:scale-110">
+          <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+            <span class="text-white text-sm font-medium">복식 경기</span>
+          </div>
+        </div>
+        <!-- 3 -->
+        <div class="group relative flex-shrink-0 w-64 overflow-hidden rounded-2xl shadow-md cursor-pointer" style="scroll-snap-align:start;">
+          <img src="images/gallery3.jpg" alt="활동 사진 3" class="w-full h-48 object-cover transition duration-500 group-hover:scale-110">
+          <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+            <span class="text-white text-sm font-medium">매너 플레이</span>
+          </div>
+        </div>
+        <!-- 4 -->
+        <div class="group relative flex-shrink-0 w-64 overflow-hidden rounded-2xl shadow-md cursor-pointer" style="scroll-snap-align:start;">
+          <img src="images/gallery4.jpg" alt="활동 사진 4" class="w-full h-48 object-cover transition duration-500 group-hover:scale-110">
+          <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+            <span class="text-white text-sm font-medium">즐거운 시간</span>
+          </div>
+        </div>
+        <!-- 5 -->
+        <div class="group relative flex-shrink-0 w-64 overflow-hidden rounded-2xl shadow-md cursor-pointer" style="scroll-snap-align:start;">
+          <img src="images/gallery5.jpg" alt="활동 사진 5" class="w-full h-48 object-cover transition duration-500 group-hover:scale-110">
+          <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+            <span class="text-white text-sm font-medium">활동 사진</span>
+          </div>
+        </div>
+        <!-- 6 -->
+        <div class="group relative flex-shrink-0 w-64 overflow-hidden rounded-2xl shadow-md cursor-pointer" style="scroll-snap-align:start;">
+          <img src="images/gallerry6.jpg" alt="활동 사진 6" class="w-full h-48 object-cover transition duration-500 group-hover:scale-110">
+          <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+            <span class="text-white text-sm font-medium">활동 사진</span>
+          </div>
+        </div>
+        <!-- 7 -->
+        <div class="group relative flex-shrink-0 w-64 overflow-hidden rounded-2xl shadow-md cursor-pointer" style="scroll-snap-align:start;">
+          <img src="images/gallerry7.jpg" alt="활동 사진 7" class="w-full h-48 object-cover transition duration-500 group-hover:scale-110">
+          <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+            <span class="text-white text-sm font-medium">활동 사진</span>
+          </div>
+        </div>
+        <!-- 8 -->
+        <div class="group relative flex-shrink-0 w-64 overflow-hidden rounded-2xl shadow-md cursor-pointer" style="scroll-snap-align:start;">
+          <img src="images/gallerry8.jpg" alt="활동 사진 8" class="w-full h-48 object-cover transition duration-500 group-hover:scale-110">
+          <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+            <span class="text-white text-sm font-medium">활동 사진</span>
+          </div>
+        </div>
+        <!-- 9 -->
+        <div class="group relative flex-shrink-0 w-64 overflow-hidden rounded-2xl shadow-md cursor-pointer" style="scroll-snap-align:start;">
+          <img src="images/gallerry9.jpg" alt="활동 사진 9" class="w-full h-48 object-cover transition duration-500 group-hover:scale-110">
+          <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+            <span class="text-white text-sm font-medium">활동 사진</span>
+          </div>
+        </div>
+        <!-- 10 -->
+        <div class="group relative flex-shrink-0 w-64 overflow-hidden rounded-2xl shadow-md cursor-pointer" style="scroll-snap-align:start;">
+          <img src="images/gallerry10.jpg" alt="활동 사진 10" class="w-full h-48 object-cover transition duration-500 group-hover:scale-110">
+          <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+            <span class="text-white text-sm font-medium">활동 사진</span>
+          </div>
+        </div>
+        <!-- 11 -->
+        <div class="group relative flex-shrink-0 w-64 overflow-hidden rounded-2xl shadow-md cursor-pointer" style="scroll-snap-align:start;">
+          <img src="images/gallerry11.jpg" alt="활동 사진 11" class="w-full h-48 object-cover transition duration-500 group-hover:scale-110">
+          <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+            <span class="text-white text-sm font-medium">활동 사진</span>
+          </div>
+        </div>
+        <!-- 12 -->
+        <div class="group relative flex-shrink-0 w-64 overflow-hidden rounded-2xl shadow-md cursor-pointer" style="scroll-snap-align:start;">
+          <img src="images/gallerry12.jpg" alt="활동 사진 12" class="w-full h-48 object-cover transition duration-500 group-hover:scale-110">
+          <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+            <span class="text-white text-sm font-medium">활동 사진</span>
+          </div>
+        </div>
 
+      </div><!-- /트랙 -->
+
+      <!-- 오른쪽 버튼 -->
+      <button id="nextBtn"
+        class="absolute right-0 top-1/2 -translate-y-1/2 z-10
+               w-10 h-10 bg-white rounded-full shadow-md border border-gray-200
+               flex items-center justify-center text-xl font-bold text-gray-600
+               hover:bg-gray-100 transition translate-x-4">
+        ›
+      </button>
+
+    </div><!-- /relative -->
+
+    <!-- 인디케이터 점 -->
+    <div class="flex justify-center gap-2 mt-6">
+      <span class="gal-dot w-2 h-2 rounded-full bg-green-600 inline-block cursor-pointer" data-idx="0"></span>
+      <span class="gal-dot w-2 h-2 rounded-full bg-gray-300 inline-block cursor-pointer" data-idx="1"></span>
+      <span class="gal-dot w-2 h-2 rounded-full bg-gray-300 inline-block cursor-pointer" data-idx="2"></span>
+      <span class="gal-dot w-2 h-2 rounded-full bg-gray-300 inline-block cursor-pointer" data-idx="3"></span>
+      <span class="gal-dot w-2 h-2 rounded-full bg-gray-300 inline-block cursor-pointer" data-idx="4"></span>
+      <span class="gal-dot w-2 h-2 rounded-full bg-gray-300 inline-block cursor-pointer" data-idx="5"></span>
+      <span class="gal-dot w-2 h-2 rounded-full bg-gray-300 inline-block cursor-pointer" data-idx="6"></span>
+      <span class="gal-dot w-2 h-2 rounded-full bg-gray-300 inline-block cursor-pointer" data-idx="7"></span>
+      <span class="gal-dot w-2 h-2 rounded-full bg-gray-300 inline-block cursor-pointer" data-idx="8"></span>
+      <span class="gal-dot w-2 h-2 rounded-full bg-gray-300 inline-block cursor-pointer" data-idx="9"></span>
+      <span class="gal-dot w-2 h-2 rounded-full bg-gray-300 inline-block cursor-pointer" data-idx="10"></span>
+      <span class="gal-dot w-2 h-2 rounded-full bg-gray-300 inline-block cursor-pointer" data-idx="11"></span>
     </div>
+
   </div>
 </section>
+
+<script>
+  const track   = document.getElementById('galleryTrack');
+  const prevBtn = document.getElementById('prevBtn');
+  const nextBtn = document.getElementById('nextBtn');
+  const dots    = document.querySelectorAll('.gal-dot');
+  const cardW   = 272;
+
+  function updateDots() {
+    const idx = Math.round(track.scrollLeft / cardW);
+    dots.forEach((d, i) => {
+      d.classList.toggle('bg-green-600', i === idx);
+      d.classList.toggle('bg-gray-300',  i !== idx);
+    });
+  }
+
+  prevBtn.addEventListener('click', () => track.scrollBy({ left: -cardW * 2, behavior: 'smooth' }));
+  nextBtn.addEventListener('click', () => track.scrollBy({ left:  cardW * 2, behavior: 'smooth' }));
+  track.addEventListener('scroll', updateDots);
+  dots.forEach(dot => {
+    dot.addEventListener('click', () => {
+      track.scrollTo({ left: cardW * Number(dot.dataset.idx), behavior: 'smooth' });
+    });
+  });
+</script>
 
 
 
